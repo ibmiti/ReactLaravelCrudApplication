@@ -13,7 +13,7 @@ class StoreSkillRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -30,7 +30,7 @@ class StoreSkillRequest extends FormRequest
         */
         return [
             'name' => ['required', 'min:3', 'max:28'],
-            'slug' => ['required', 'unique:skills, slug']
+            'slug' => ['required', 'unique:skills,slug,' . $this->skill->id]
         ];
     }
 }
