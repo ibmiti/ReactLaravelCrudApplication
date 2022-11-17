@@ -9,7 +9,7 @@ Route::group(['prefix'=> 'version1'], function(){
 });
 
 /*
-    |Testing the above api Route|
+    |Testing the above api Route(s)|
 (a) Navigate to Postman (or other)
 (b) enter api Route into url bar
     (1) http://127.0.0.1:8000/api/version1/skills
