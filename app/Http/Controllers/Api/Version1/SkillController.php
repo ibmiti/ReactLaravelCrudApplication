@@ -11,12 +11,11 @@ use App\Models\Skill;
 class SkillController extends Controller
 {
     public function index(){
-        // return response()->json("Skill Index");
-        return SKillResource::collection(Skill::all());
+        return SKillResource::collection(Skill::paginate(2));
     }
 
     public function show(Skill $skill){
-        // This resource will return an json like response when initiated
+        // returns json-like response
         return new SkillResource($skill);
     }
 
@@ -30,7 +29,8 @@ class SkillController extends Controller
         return response()->json("Skill Updated");
     }
 
-    // public function destroy(StoreSkillRequest $){
-
-    // }
+    public function destroy(Skill $skill){
+        $skill->delete();
+        return response()->json("Skill Deleted");
+    }
 }
