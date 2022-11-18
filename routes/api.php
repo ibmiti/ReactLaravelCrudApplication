@@ -9,7 +9,7 @@ Route::group(['prefix'=> 'version1'], function(){
 });
 
 /*
-    |Testing the above api Route(s)|
+                    |Testing the above api Route(s)|
 (a) Navigate to Postman (or other)
 (b) enter api Route into url bar
     (1) http://127.0.0.1:8000/api/version1/skills
@@ -18,6 +18,11 @@ Route::group(['prefix'=> 'version1'], function(){
             (1) destination : '.../skills'
 (c) Pay attention to the method youre searching with
     (1) GET/POST/PUT/Other...
+(d) Testing the different methods
+    (1) The index route
+        (a) .../skills
+    (2) The update route
+        (a)  ../api/version1/skills/1
 
 
 */
