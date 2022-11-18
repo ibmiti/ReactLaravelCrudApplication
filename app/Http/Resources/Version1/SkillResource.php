@@ -16,8 +16,8 @@ class SkillResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
-            'slug' => $this->slug
+            'skillName' => $this->name,
+            'url' => $this->slug
         ];
         // This returns full object, including created_at, updated_at
         // return parent::toArray($request);
